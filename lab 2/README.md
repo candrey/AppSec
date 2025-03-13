@@ -98,15 +98,14 @@ pg_password: Jieghaij0OoNg8nait
       requirements: /opt/otus/requirements.txt
       virtualenv: /opt/otus/.venv
     become: yes
-    become_user: hng
+    become_user: otus
 
   - name: Create an env file
     ansible.builtin.template:
       src: env.j2
       dest: /opt/otus/.env
     become: yes
-    become_user: hng
-    
+    become_user: otus
 ```
 
 ## 5. Подходы к безопасному хранению и управлению ключами доступа
